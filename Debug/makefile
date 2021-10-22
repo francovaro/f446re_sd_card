@@ -30,7 +30,7 @@ endif
 all: f446re_sd_card.elf
 
 dependents:
-	-cd C:/work/workspace_stm/nucleo-f446re_stdperiph_lib/Debug && $(MAKE) all
+	-cd C:/work/workspace_stm/nucleo-f446re_stdperiph_lib/Debug && $(MAKE) clean all
 
 # Tool invocations
 f446re_sd_card.elf: $(OBJS) $(USER_OBJS) C:/work/workspace_stm/nucleo-f446re_stdperiph_lib/Debug/libnucleo-f446re_stdperiph_lib.a C:\work\workspace_stm\f446re_sd_card/LinkerScript.ld
