@@ -4,23 +4,23 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/main.c \
-../src/syscalls.c \
-../src/system_stm32f4xx.c 
+../driver/fatfs/source/ff.c \
+../driver/fatfs/source/ffsystem.c \
+../driver/fatfs/source/ffunicode.c 
 
 OBJS += \
-./src/main.o \
-./src/syscalls.o \
-./src/system_stm32f4xx.o 
+./driver/fatfs/source/ff.o \
+./driver/fatfs/source/ffsystem.o \
+./driver/fatfs/source/ffunicode.o 
 
 C_DEPS += \
-./src/main.d \
-./src/syscalls.d \
-./src/system_stm32f4xx.d 
+./driver/fatfs/source/ff.d \
+./driver/fatfs/source/ffsystem.d \
+./driver/fatfs/source/ffunicode.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-src/%.o: ../src/%.c
+driver/fatfs/source/%.o: ../driver/fatfs/source/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Compiler'
 	@echo $(PWD)

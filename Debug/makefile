@@ -10,6 +10,8 @@ RM := rm -rf
 -include sources.mk
 -include startup/subdir.mk
 -include src/subdir.mk
+-include driver/sd_spi/subdir.mk
+-include driver/fatfs/source/subdir.mk
 -include subdir.mk
 -include objects.mk
 

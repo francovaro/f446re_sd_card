@@ -7,8 +7,8 @@
   * @brief   Default main function.
   ******************************************************************************
 */
+#include <sd_spi/spi.h>
 #include "stm32f4xx.h"
-#include "spi.h"
 #include "ff.h"
 
 /**

@@ -4,23 +4,20 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/main.c \
-../src/syscalls.c \
-../src/system_stm32f4xx.c 
+../driver/sd_spi/sd_spi.c \
+../driver/sd_spi/spi.c 
 
 OBJS += \
-./src/main.o \
-./src/syscalls.o \
-./src/system_stm32f4xx.o 
+./driver/sd_spi/sd_spi.o \
+./driver/sd_spi/spi.o 
 
 C_DEPS += \
-./src/main.d \
-./src/syscalls.d \
-./src/system_stm32f4xx.d 
+./driver/sd_spi/sd_spi.d \
+./driver/sd_spi/spi.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-src/%.o: ../src/%.c
+driver/sd_spi/%.o: ../driver/sd_spi/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: MCU GCC Compiler'
 	@echo $(PWD)
